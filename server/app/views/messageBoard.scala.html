@@ -1,0 +1,51 @@
+@* messageBoard Template File*@
+@(privateMessages: Seq[(String, String)], publicMessages: Seq[(String, String)])(implicit request: RequestHeader, flash: Flash)
+
+@main("Task List") {
+    <div class="viewPrivate">
+        <h1>Private Messages</h1>
+        <ul>
+            @for(message <- privateMessages) {
+                <li>From: @message._1 <br>
+                    Message: @message._2</li>
+                <br>
+            }
+        </ul>
+    </div>
+
+    <div class="viewPublic">
+        <h1>Public Messages</h1>
+        <ul>
+            @for(message <- publicMessages) {
+                <li>From: @message._1 <br>
+                    Message: @message._2</li>
+                <br>
+            }
+        </ul>
+    </div>  
+
+    <div>
+        <a href="@routes.MessageBoard.logout()">Logout</a>
+    </div>
+
+    <form method="post" class = "sendPrivate" action="@routes.MessageBoard.sendPrivateMessage()">
+        @helper.CSRF.formField
+        <h3>Send Private Message</h3>
+        <h4>To:</h4>
+        <br>
+        <input type="text" name="messageReceiver"/>
+        <h4>Message:</h4>
+        <input type="text" name="privateMessage"/>
+        <br>
+        <input type="submit" class="sendButton" value="Send Message"/>
+    </form>
+
+    <form method="post" class = "sendPublic" action="@routes.MessageBoard.sendPublicMessage()">
+        @helper.CSRF.formField
+        <h3>Send Public Message</h3>
+        <h4>Message:</h4>
+        <input type="text" name="publicMessage"/>
+        <br>
+        <input type="submit" class="sendButton" value="Send Message"/>
+    </form>
+}

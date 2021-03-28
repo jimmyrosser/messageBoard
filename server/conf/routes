@@ -1,0 +1,23 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /                 	controllers.Application.index
+
+# Prefix must match `play.assets.urlPrefix`
+GET        /assets/*file                 controllers.Assets.at(file)
+GET        /versionedAssets/*file        controllers.Assets.versioned(path="/public", file: Asset)
+
+GET        /messages                     controllers.MessageBoard.messages
+
+GET        /login1                       controllers.MessageBoard.login
+
+POST       /validatePost1                controllers.MessageBoard.validateLoginPost
+
+POST       /createUser1                  controllers.MessageBoard.createUser
+
+POST       /sendPrivateMessage           controllers.MessageBoard.sendPrivateMessage
+POST       /sendPublicMessage             controllers.MessageBoard.sendPublicMessage
+
+GET        /logout                      controllers.MessageBoard.logout

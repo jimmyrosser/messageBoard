@@ -1,0 +1,38 @@
+h1 {
+	text-size: 800px;
+}
+
+ul {
+	list-style-type: none;
+}
+
+a {
+	font-size: 22px;
+	border: 3px solid black;
+	border-radius: 15%;
+}
+
+.sendPrivate {
+	width: 178px;
+	margin-top: 15px;
+	border: 3px solid black;
+}
+
+.sendPublic {
+	margin-top: 10px;
+	width: 178px;
+	border: 3px solid black;
+}
+
+.viewPrivate {
+	width: 300px;
+	border: 3px solid black;
+}
+
+.viewPublic {
+	margin-top: 10px;
+	margin-bottom: 15px;
+	width: 300px;
+	border: 3px solid black;
+}
+
