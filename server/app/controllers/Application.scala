@@ -1,8 +1,7 @@
 package controllers
 
-import javax.inject._
+/*import javax.inject._
 
-import shared.SharedMessages
 import play.api.mvc._
 import play.api.i18n._
 
@@ -13,4 +12,4 @@ class Application @Inject()(cc: ControllerComponents) extends AbstractController
     Ok(views.html.index(SharedMessages.itWorks))
   }
   
-}
+}*/

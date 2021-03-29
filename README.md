@@ -1,4 +1,6 @@
-# Play-Scalajs for video series
+# play-scalajs-slinky
 
-This repository has the code for my video series using Play
-and Scala.js.
+This is my starter project for things that involve Play using Scala.js and
+the Slinky React binding. I'm using this as the starter for student code in
+Web Apps Spring 2021.
+
