@@ -47,3 +47,6 @@ lazy val commonSettings = Seq(
 
 // loads the server project at sbt startup
 onLoad in Global := (onLoad in Global).value andThen {s: State => "project server" :: s}
+libraryDependencies += guice
+libraryDependencies += "org.scalatestplus.play" %% "scalatestplus-play" % "5.0.0" % Test
+libraryDependencies += "org.scalatest" % "scalatest_2.10" % "2.0" % "test"

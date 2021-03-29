@@ -14,13 +14,13 @@ object MessageBoardInMemoryModel {
         users.get(username).map(_ == password).getOrElse(false)
     }
 
-def createUser(username: String, password: String): Boolean = {
-    if(users.contains(username)) false
-    else {
-        users(username) = password
-        true
+    def createUser(username: String, password: String): Boolean = {
+        if(users.contains(username)) false
+        else {
+            users(username) = password
+            true
+        }
     }
-}
 
     def getMessages(username: String): Seq[(String, String)] = {
         messagesMap.get(username).getOrElse(Nil).toSeq
