@@ -5,5 +5,9 @@
 
     "scripts": {
         "postinstall": "ng build"
+      },
+
+      "engines": {
+        "node": "10.x"
       }
 }
